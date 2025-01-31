@@ -1,0 +1,53 @@
+.cont{
+    /* border: 1px solid black; */
+    padding: 10px 20px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+
+}
+.card{
+border: 1px solid lightgray;
+padding: 5px 10px;
+text-align: center;
+border-radius: 6px;
+
+}
+.view-btn{
+    background-color: green;
+        color: beige;
+        border: none;
+    padding: 6px 5px;
+    width: 80px;
+    }
+
+.dlt-btn {
+    background-color: red;
+        color: beige;
+                border: none;
+                padding: 6px 5px;
+                width: 80px;
+}
+.edit-btn {
+    background-color:yellow;
+        color: beige;
+                border: none;
+                padding: 6px 5px;
+                width: 80px;
+                }
+.btn-div{
+   width: 70%;
+   margin: auto;
+   display: flex;
+   gap: 10px;
+
+}
+.add-btn{
+    width: 120px;
+    background-color: olivedrab;
+    padding: 10px;
+    border-radius: 3px;
+    border: none;
+    margin: auto;
+    border: 1px solid lightgray;
+}
