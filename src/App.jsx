@@ -1,36 +1,38 @@
-import React from "react"
-import {Routes, Route} from 'react-router-dom'
-import BookDetails from "./pages/BookDetails";
-// import Login from "./pages/Login";
+import React from "react";
+import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import Books from "./pages/Books";
+import Movies from "./pages/Movies";
+import MovieDetails from "./pages/MovieDetails";
+import Login from "./pages/Login";
 import Navbar from "./components/Navbar";
-import AddBooks from "./pages/AddBooks";
-import EditBooks from "./pages/EditBooks"
-// import ProtectedRoute from "./context/ProtectedRoute";
+import PrivateRoute from "./context/PrivateRoute";
 
-const App=()=>{
-  
-   return (
-     <>
-       <Navbar />
-       <Routes>
-         <Route path="/" element={<Home />} />
-         <Route
-           path="/books"
-           element={
-            //  <ProtectedRoute>
-               <Books />
-            //  </ProtectedRoute>
-           }
-         />
-         <Route path="/bookdetails/:id" element={<BookDetails />} />
-         {/* <Route path="/login" element={<Login />} /> */}
-         <Route path="/addbooks" element={<AddBooks />} />
-         <Route path="/editbooks" element={<EditBooks />} />
-       </Routes>
-     </>
-   );
-}
+const App = () => {
+  return (
+    <>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route
+          path="/movies"
+          element={
+            <PrivateRoute>
+              <Movies />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/moviedetails/:id"
+          element={
+            <PrivateRoute>
+              <MovieDetails />
+            </PrivateRoute>
+          }
+        />
+        <Route path="/login" element={<Login />} />
+      </Routes>
+    </>
+  );
+};
 
-export default App
+export default App;
